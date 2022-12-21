@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody pRigid;
+    [SerializeField] float playerSpeed;
+    [SerializeField] float turnSpeed;
     void Start()
     {
         pRigid = FindObjectOfType<Rigidbody>();
@@ -17,19 +19,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("w"))
         {
-            pRigid.AddForce(0, 0, 1000 * Time.deltaTime);
+            pRigid.AddForce(0, 0, playerSpeed * Time.deltaTime);
         }
         if (Input.GetKey("a"))
         {
-            pRigid.AddForce(-500 * Time.deltaTime, 0, 0);
+            pRigid.AddForce(-turnSpeed * Time.deltaTime, 0, 0,ForceMode.VelocityChange);
         }
         if (Input.GetKey("d"))
         {
-            pRigid.AddForce(500 * Time.deltaTime, 0, 0);
+            pRigid.AddForce(turnSpeed * Time.deltaTime, 0, 0,ForceMode.VelocityChange);
         }
         if (Input.GetKey("s"))
         {
-            pRigid.AddForce(0, 0, -1000 * Time.deltaTime);
+            pRigid.AddForce(0, 0, -playerSpeed * Time.deltaTime);
         }
     }
 }
