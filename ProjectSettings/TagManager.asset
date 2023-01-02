@@ -7,6 +7,7 @@ TagManager:
   - Gold
   - finish
   - failed
+  - Retarder
   layers:
   - Default
   - TransparentFX

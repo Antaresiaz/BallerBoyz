@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody pRigid;
+    [SerializeField] Rigidbody pRigid;
     [SerializeField] float playerSpeed;
     [SerializeField] float turnSpeed;
     void Start()
     {
-        pRigid = FindObjectOfType<Rigidbody>();
+        
     }
 
     
@@ -34,4 +34,14 @@ public class PlayerMovement : MonoBehaviour
             pRigid.AddForce(0, 0, -playerSpeed * Time.deltaTime);
         }
     }
+
+     void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Retarder")
+        {
+            pRigid.velocity = pRigid.velocity * 0.5f*Time.deltaTime;
+        }
+        
+    }
+    
 }

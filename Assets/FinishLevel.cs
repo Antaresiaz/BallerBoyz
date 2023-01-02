@@ -26,6 +26,7 @@ public class FinishLevel : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }

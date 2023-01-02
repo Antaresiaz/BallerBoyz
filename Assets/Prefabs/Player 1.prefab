@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e240918b47cbf44b9344cce51008bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pRigid: {fileID: 6762072624882992}
   playerSpeed: 1000
   turnSpeed: 50
 --- !u!114 &6762072624883006
@@ -154,3 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaf789a171c5f84a9f4afc8700d0190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  congratsText: {fileID: 0}
