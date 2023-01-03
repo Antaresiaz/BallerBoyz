@@ -19,11 +19,14 @@ public class FinishLevel : MonoBehaviour
         }
         if(other.tag == "failed")
         {
-            Debug.Log("YOU FAILED!");
-            SceneManager.LoadScene(0);
+            Invoke("ReloadFailedScene", 1);
         }
     }
-
+    public void ReloadFailedScene()
+    {
+        congratsText.text = "YOU FAILED!";
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
