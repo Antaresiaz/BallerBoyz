@@ -1,1 +1,1 @@
-DGD203 - Introduction to Game Programming (C#) (2) Final Project by Mehmet Arda Koksal
+DGD202 - Game Engines 1 (Unity) Midterm Project by Mehmet Arda Köksal(205040061)
